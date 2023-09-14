@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-asset-item id = "chair" src = "Models/Chair/scene.gltf"></a-asset-item>
+                <a-asset-item id = "table" src = "Models/Table/scene.gltf"></a-asset-item>
+            </a-assets>
+            <a-sky color = "black"></a-sky>
+            <a-plane position = "0 2 -4" width = "7" height = "5.3"
+            src = "Models/Wooden_plane.jpeg"></a-plane>
+            <a-plane position = "0 0 -4" width = "7" height = "5" rotation = "-90 0 0"
+            src = "Models/Tiles.jpg"></a-plane>
+            
+            <a-entity>
+                <a-entity position = "2.5 1.5 -3" gltf-model = "#chair" scale = "0.2 0.2 0.2" rotation = "0 90 0"></a-entity>
+            </a-entity>
+
+            <a-entity>
+                <a-entity position = "-2.5 1.5 -3" gltf-model = "#chair" scale = "0.2 0.2 0.2" rotation = "0 -90 0"></a-entity>
+            </a-entity>
+
+            <a-entity>
+                <a-entity position = "0 0.5 -3" gltf-model = "#table" rotation = "0 90 0"></a-entity>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
